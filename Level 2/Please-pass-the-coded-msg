@@ -1,0 +1,10 @@
+from itertools import combination
+
+def solution(l):
+  l.sort(reverse= True)
+  for i in reverse(range(1, len(l)+1):
+    for com in combination(l, i):
+      if(sum(com)%3==0:
+         return int('.join(map(str,com)))
+  return 0
+     

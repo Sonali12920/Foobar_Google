@@ -1,0 +1,13 @@
+m=0
+sal=0
+for(i in range (len(s)):
+  if s[i] is'<'
+    m=m+1
+for(i in range (len(s)):
+  if s[i] is'>'
+    m=m-1
+  elif s[i] is '>':
+   sal=sal+mul
+
+total_sal=sal*2
+ return total_sal

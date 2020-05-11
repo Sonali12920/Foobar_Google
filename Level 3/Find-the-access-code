@@ -1,0 +1,25 @@
+public static int Solution( int[] l)
+{
+    int combo = 0;
+    int[] doubles = new int[l.length];
+
+    for( int i = 1; i < l.length; i++)
+    {
+        for( int j = 0; j < i; j++)
+        {
+            if( l[i] % l[j] == 0)
+                doubles[i]++;
+        }
+    }
+
+    for( int i = 1; i < l.length; i++)
+    {
+        for( int j = 1; j < i; j++)
+        {
+            if( l[i] % l[j] == 0)
+                combo += doubles [j];
+        }
+    }
+
+    return combo ;
+}
