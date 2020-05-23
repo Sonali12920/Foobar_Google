@@ -1,4 +1,4 @@
-static int[][] mem0 = new int[202][202];
+static int[][] memo = new int[202][202];
 
   public static int Solution(int n) {
     return guide(1, n) - 1;
@@ -16,7 +16,7 @@ static int[][] mem0 = new int[202][202];
     }
 
     int value = guide(h + 1, l - h) + guide(h + 1, l);
-    mem[h][l] = value;
+    memo[h][l] = value;
     return value;
   }
 }
