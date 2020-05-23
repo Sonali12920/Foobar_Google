@@ -1,0 +1,20 @@
+import java.math.BigInteger;
+public class Solution {   
+    static private boolean isPoss;
+   
+    public static BigInteger cycles(BigInteger i, BigInteger j) {
+        if (j.compareTo(BigInteger.valueOf(0)) == 0) return i;
+        else if (i.mod(j) == BigInteger.valueOf(0) && j.compareTo(BigInteger.valueOf(1)) > 0) isPoss = false;
+        return i.divide(j).add(cycles(j, i.mod(j)));
+    }
+    
+    public static String solution(String x, String y) { 
+        BigInteger m = new BigInteger(x);
+        BigInteger f = new BigInteger(y);
+        isPoss = true;
+        BigInteger res = cycles(m, f).subtract(BigInteger.valueOf(2));
+        if (!isPoss) return "impossible";
+            else return res.toString();
+
+    }
+}
